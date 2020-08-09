@@ -1,0 +1,64 @@
+.container{
+    width: 100%;
+    max-width: none;
+    text-align: -webkit-center;
+    margin-top:20px;
+    display: contents;
+}
+table {
+    width: 100%;
+}  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+} 
+
+.oculto td,th{
+    width:0px;
+}
+.text{
+    width: 67px;
+    border: none;
+}
+.text-large{
+    width: 325px;
+    border: none;
+}
+.paginator{
+    margin-right: 283px;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+.mat-icon{
+  color:#a02222;;
+}
+.actions{
+  text-align: right;
+}
+
+mat-expansion-panel{
+  width: 95%;
+}
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
+.example-headers-align{
+  margin-top:10px;
+}
+
+mat-form-field-infix{
+  width: 25px !important;
+}
+.hide{
+  display:none;
+}
+.name{
+  padding-left: 26px!important;
+}

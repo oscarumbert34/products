@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <button mat-button (click)="openTransactions()">Transactions</button>
+            <button mat-icon-button (click)='showOrHideForm()'><mat-icon>add_circle_outline</mat-icon></button>
+            <button mat-button (click)="openStock()">Stock</button>
+            <div>
+                <mat-card [ngClass]="displayForm">
+                    <mat-card-header>
+                      <div ><mat-icon class="card-icon">note_add</mat-icon></div>
+                      <h4 class="card-title">Create product</h4>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <form class="example-form" [formGroup]="product">
+                            <mat-form-field>
+                                <input matInput placeholder="Name" formControlName="name" [(ngModel)]="request.name">
+                              </mat-form-field>
+                            
+                              <mat-form-field>
+                                <textarea matInput placeholder="Description" formControlName="description" [(ngModel)]="request.description"></textarea>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input matInput placeholder="Value" type="number" formControlName="value" class="example-right-align" [(ngModel)]="request.value">
+                                <span matPrefix>$&nbsp;</span>
+                                <span matSuffix>.00</span>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input matInput placeholder="Sale value" type="number" formControlName="saleValue" name="saleValue" class="example-right-align" [(ngModel)]="request.saleValue">
+                                <span matPrefix>$&nbsp;</span>
+                                <span matSuffix>.00</span>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input matInput placeholder="Quantity" formControlName="quantity" name="quantity" [(ngModel)]="request.quantity">
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input matInput placeholder="Box" formControlName="box" name="box" [(ngModel)]="request.box">
+                              </mat-form-field>
+                             
+                              <mat-form-field>
+                                <input matInput placeholder="Gain" formControlName="gain" name="gain" type="number" class="example-right-align" [(ngModel)]="request.gain">
+                                <span matPrefix>$&nbsp;</span>
+                                <span matSuffix>.00</span>
+                              </mat-form-field>
+                        </form>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" [disabled]="product.invalid" (click)="save()">save</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </div>
+
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+      
+    </div>
+</div>
